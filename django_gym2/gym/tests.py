@@ -39,6 +39,10 @@ class MemberTestCase(TestCase):
     def test_member_fitness_level(self):
         self.assertEquals(self.member1.fitness_level, "High")
 
+    def test_member_str_method(self):
+        self.assertEquals(self.member1.__str__(), "Ron Jones")
+
+
 class SessionTestCase(TestCase):
     def setUp(self):
         self.instructor1 = Instructor.objects.create(first_name = "Mazie", last_name = "Kinsella", profile="I love pilates!")
@@ -76,8 +80,11 @@ class SessionTestCase(TestCase):
     def test_session_capacity(self):
         self.assertEquals(self.session1.capacity, 9)
     
-    def test_member_starts_with_no_members(self):
+    def test_session_starts_with_no_members(self):
         self.assertEquals(len(self.session1.members), 0)
+
+    def test_session_str_method(self):
+        self.assertEquals(self.session1.__str__(), "Pilates")
 
 class InstructorTestCase(TestCase):
     def setUp(self):
@@ -94,4 +101,9 @@ class InstructorTestCase(TestCase):
 
     def test_instructor_profile(self):
         self.assertEquals(self.instructor1.profile, "I love pilates!")
-        
+    
+    def test_instructor_starts_with_no_sessions(self):
+        self.assertEquals(len(self.instructor1.sessions_they_can_teach), 0)
+    
+    def test_instructor_str_method(self):
+        self.assertEquals(self.instructor1.__str__(), "Mazie Kinsella")

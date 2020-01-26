@@ -36,7 +36,7 @@ class Member(models.Model):
 class Instructor(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    classes_they_can_teach = []
+    sessions_they_can_teach = []
     profile = models.TextField()
 
     def __str__(self):
