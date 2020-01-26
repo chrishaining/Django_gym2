@@ -42,7 +42,9 @@ class MemberTestCase(TestCase):
 class SessionTestCase(TestCase):
     def setUp(self):
         self.instructor1 = Instructor.objects.create(first_name = "Mazie", last_name = "Kinsella", profile="I love pilates!")
-        self.session1 = Session.objects.create(title = "Pilates", instructor=self.instructor1)
+        self.session1 = Session.objects.create(title = "Pilates", description="Some people love pilates, apparently.", level="High", capacity=9, instructor=self.instructor1)
+
+        self.session2 = Session.objects.create(title = "Yoga", instructor=self.instructor1)
     
     def test_session_saved(self):
         self.assertGreater(self.session1.pk, 0)
@@ -55,6 +57,27 @@ class SessionTestCase(TestCase):
 
     def test_session_instructor_first_name(self):
         self.assertEquals(self.session1.instructor.first_name, "Mazie")
+    
+    def test_session_description_default(self):
+        self.assertEquals(self.session2.description, "Please call 0300 45 45 for more info")
+
+    def test_session_description(self):
+        self.assertEquals(self.session1.description, "Some people love pilates, apparently.")
+
+    def test_session_level_default(self):
+        self.assertEquals(self.session2.level, "Medium")
+
+    def test_session_level(self):
+        self.assertEquals(self.session1.level, "High")
+
+    def test_session_capacity_default(self):
+        self.assertEquals(self.session2.capacity, 15)
+    
+    def test_session_capacity(self):
+        self.assertEquals(self.session1.capacity, 9)
+    
+    def test_member_starts_with_no_members(self):
+        self.assertEquals(len(self.session1.members), 0)
 
 class InstructorTestCase(TestCase):
     def setUp(self):

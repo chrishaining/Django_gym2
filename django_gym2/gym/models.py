@@ -31,4 +31,22 @@ class Instructor(models.Model):
     
 class Session(models.Model):
     title = models.CharField(max_length=255)
+    description = models.TextField(default="Please call 0300 45 45 for more info")
+    
+    LOW = 'Low'
+    MEDIUM = 'Medium'
+    HIGH = 'High'
+    LEVEL_CHOICES = [
+        (LOW, 'Low'),
+        (MEDIUM, 'Medium'),
+        (HIGH, 'High')
+    ]
+    level = models.CharField(max_length=6,
+        choices=LEVEL_CHOICES,
+        default=MEDIUM,)
+
+    capacity = models.IntegerField(default=15)
+
     instructor = models.ForeignKey(Instructor, default="", on_delete=models.CASCADE)
+    members = []
+    

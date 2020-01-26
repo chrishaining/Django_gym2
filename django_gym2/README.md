@@ -13,6 +13,7 @@ This is my second attempt at creating a gym app using Django. The scenario is an
 * Create a login feature for authorisation
 * Enable users to edit details using a form
 * Enable users to click on sections of a web page to view/edit them
+* I also used this as an oppotunity to practise unit testing of the models
 
 ## Languages/packages
 * Python 3
