@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Hello from the gym index!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <table>
+                <th>Sessions</th>
+                {% for session in sessions %}
+                <tr>
+                    <td>{{ session.title }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-sm-3">
+            <table>
+                <th>Instructors</th>
+                {% for instructor in instructors %}
+                <tr>
+                    <td>{{ instructor.first_name }} {{ instructor.last_name }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
