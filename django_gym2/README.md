@@ -30,4 +30,4 @@ This is my second attempt at creating a gym app using Django. The scenario is an
 * To run the app: `python manage.py runserver`. Use the local port advised in the script.
 * To gain access to the admin function, create a user from the command line: `python manage.py createsuperuser`
 
-# <img src="/static/images/weightlifting.jpg" width="80%" height="200">
+<img src="/static/images/weightlifting.jpg" width="80%" height="200">

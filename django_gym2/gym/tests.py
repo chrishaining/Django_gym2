@@ -94,3 +94,4 @@ class InstructorTestCase(TestCase):
 
     def test_instructor_profile(self):
         self.assertEquals(self.instructor1.profile, "I love pilates!")
+        
