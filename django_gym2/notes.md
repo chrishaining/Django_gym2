@@ -3,6 +3,7 @@
 This document contains some of the thoughts and questions I had during the creation of the Django Gym app. The purpose of the document is to improve my understanding of the concepts I am using, and to compare the way Django works with other technologies (in particular React).
 
 
+<!-- I have added the seeds for the sessions. They didn't work (due to a foreign key problem), and it's not a problem I need to focus on (as I should be able to add sessions via the admin site). -->
   <!-- {
         "model": "gym.Session",
         "fields": {
