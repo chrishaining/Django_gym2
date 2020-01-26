@@ -1,0 +1,49 @@
+[
+    {
+        "model": "gym.Member",
+        "fields": {
+            "first_name": "Jan",
+            "last_name": "Petersen",
+            "dob": "01/February/1950",
+            "age": 69,
+            "weight": 80,
+            "height": 180,
+            "fitness_level": "High",
+            "goal": "Build strength"
+        }
+    },
+
+    {
+        "model": "gym.Member",
+        "fields": {
+            "first_name": "Lena",
+            "last_name": "Khan",
+            "dob": "12/September/1990",
+            "age": 29,
+            "weight": 85,
+            "height": 170,
+            "fitness_level": "Low",
+            "goal": "Lose weight"
+        }
+    },
+
+ 
+    {
+        "model": "gym.Instructor",
+        "fields": {
+            "first_name": "Rory",
+            "last_name": "Agar",
+            "profile": "I have 10 years of experience as a personal trainer. Before that I spent 20 years in the Army. I'll get your butt into shape!"
+        }
+    },
+
+    {
+        "model": "gym.Instructor",
+        "fields": {
+            "first_name": "Cara",
+            "last_name": "Juniper",
+            "profile": "After years of being overweight and getting bullied, I fell in love with fitness. Now I want to help others get into shape."
+        }
+    }
+
+]
