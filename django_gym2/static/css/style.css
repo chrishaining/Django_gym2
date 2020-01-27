@@ -44,3 +44,7 @@ table {
 h1.welcome {
     padding-bottom: 40px;
 }
+
+img.pic {
+    max-height: 20px;
+}
