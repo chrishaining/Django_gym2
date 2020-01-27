@@ -8,6 +8,42 @@ I'm trying to get my head around the admin site and how this could connect with 
 Tables - I'm playing with the Bootstrap table properties. At the moment I'm trying to change the widths of the columns. I've seen that using w-auto inside the class expression will automatically set the width to accommodate the contents, but it isn't working.  
     
 
+How to select an instructor from the list on the home page and view the full details? 
+In the home page, the instructor table shows the names of each instructor. Each row represents a different instructor. The user hovers over a row in the Instructors table. When they click on the row, they should be able to see more details on the chosen instructor (e.g. profile, sessions they can teach). This could either be a pop-up window or a new page. 
+
+Some ideas I found online:
+<button type="submit" value={{excel_path}} onclick="location.href='{% url 'downloadexcel' %}'" name='mybtn2'>Download Excel file</button>
+
+<form action='actionUrl' method='GET'>
+<button type='submit'> sort me</button>
+</form>
+
+
+#locations/urls.py
+# -*- coding: UTF-8 -*-
+from django.conf.urls import patterns, url
+
+urlpatterns = patterns("locations.views",
+    url(r"^$", "location_list", name="location_list"),
+    url(r"^(?P<slug>[^/]+)/$", "location_detail",
+        name="location_detail"),
+    url(r"^(?P<slug>[^/]+)/popup/$", "location_detail_popup",
+        name="location_detail_popup...
+
+
+Possible code for dealing with many-to-many aspect of sessions:
+Inside models.py - 
+    class Session(models.Model): 
+    ...
+    participants = models.ManyToManyField(Member)
+
+Then when you want to add a member to a session (not sure which file this would go in):
+    session.participants.add(new_member)
+
+# Retrieving objects
+one_entry = Entry.objects.get(pk=1)
+[Django docs](https://docs.djangoproject.com/en/3.0/topics/db/queries/#field-lookups)
+
 
 <!-- I have added the seeds for the sessions. They didn't work (due to a foreign key problem), and it's not a problem I need to focus on (as I should be able to add sessions via the admin site). -->
   <!-- {

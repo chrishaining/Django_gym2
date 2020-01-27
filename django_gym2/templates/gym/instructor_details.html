@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1 class="welcome">Instructor Details</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table table-striped w-auto table-bordered table-responsive table-hover">
+                    {% for instructor in instructors %}
+                    <thead class="thead-light">
+                        <th colspan="2"> {{ instructor.first_name }} {{ instructor.last_name }}</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>First name: </th>
+                            <td>{{ instructor.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Last name: </th>
+                            <td> {{ instructor.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Sessions they can teach: </th>
+                            <td> {{ member.sessions_they_can_teach }}</td>
+                        </tr>
+                        <tr>
+                            <th>Profile: </th>
+                            <td>{{ instructor.profile }}</td>
+                        </tr>
+
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
