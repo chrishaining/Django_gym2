@@ -12,7 +12,7 @@ def index(request):
 
 # InstructorDetailView.as_view
 # def instructor(request):
-#     instructors = Instructor.objects.all()
+#     instructor = Instructor.objects.get(instructor.id)
 #     return render(request, "gym/instructor_details.html", locals())
 
 class InstructorDetailView(generic.DetailView):
