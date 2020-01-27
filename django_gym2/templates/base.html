@@ -9,20 +9,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
     <title>Your Gym</title>
 </head>
 
 <body>
     <div class="header">
+        <nav class="navbar fixed-top navbar-expand-md">
             <button class="navbar-toggler hidden-sm" data-toggle="collapse" data-target="#navbarMenu">
                 <span class="navbar-toggler-icon">&#9776</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav">
                     <li class="nav"><a class="navbar-brand" href="{% url 'index' %}">Home</a></li>
-                    <li class="nav"><a class="navbar-brand " href="/admin">Admin</a></li>
-                    <li class="nav"><a class="navbar-brand " href="{% url 'login' %}">Log in</a></li>
+                    <li class="nav"><a class="navbar-brand" href="/admin">Admin</a></li>
+                    <li class="nav"><a class="navbar-brand" href="{% url 'login' %}">Log in</a></li>
+                    <li class="nav"><a class="navbar-brand" href="{% url 'logout' %}">Log out</a></li>
                 </ul>
             </div>
         </nav>
