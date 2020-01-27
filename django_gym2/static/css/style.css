@@ -1,7 +1,42 @@
 body {
-    color: blue;
+    color: #003399;
 }
 
-h1 {
-    color: green
+.header {
+    background-color: #003399
+}
+
+/* .nav {
+    color: white
+} */
+
+.navbar-toggler-icon {
+    color: white;
+    /* background-color: #003399; */
+    padding-left: 20px;
+    font-size: 200%
+  } 
+
+
+.navbar-brand {
+    color: white
+}
+
+.navbar-brand:hover {
+    color: #ffd700
+} 
+
+table {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+    /* color: #003399 */
+}
+
+.table-hover tbody tr:hover td {
+    background-color: #ffd700
+}
+
+h1.welcome {
+    padding-bottom: 40px;
 }
