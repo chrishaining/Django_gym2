@@ -2,6 +2,12 @@
 
 This document contains some of the thoughts and questions I had during the creation of the Django Gym app. The purpose of the document is to improve my understanding of the concepts I am using, and to compare the way Django works with other technologies (in particular React).
 
+27/Jan/2020
+I'm trying to get my head around the admin site and how this could connect with the main app. In the admin site, I've created a group of users called Members. These members can view and edit certain fields, but I'm not sure how that translated to the code for the app.
+
+Tables - I'm playing with the Bootstrap table properties. At the moment I'm trying to change the widths of the columns. I've seen that using w-auto inside the class expression will automatically set the width to accommodate the contents, but it isn't working.  
+    
+
 
 <!-- I have added the seeds for the sessions. They didn't work (due to a foreign key problem), and it's not a problem I need to focus on (as I should be able to add sessions via the admin site). -->
   <!-- {

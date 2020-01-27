@@ -3,16 +3,50 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <h1 class="welcome">Hi {{ user.first_name }}! Welcome to the Member Details Page.</h1>
+        <h1 class="welcome">Hello {{ user.first_name }}! Welcome to the Member Details Page.</h1>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p>First column</p>
+                <table class="table table-striped w-auto table-bordered table-responsive table-hover">
+                    <thead class="thead-light">
+                        <th colspan="2">Your details</th>
+                    </thead>
+                    <tbody>
+                        {% for member in members %}
+                        {% if member.first_name == user.first_name %}
+                        <tr>
+                            <th>First name: </th>
+                            <td>{{ member.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Last name: </th>
+                            <td> {{ member.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Weight: </th>
+                            <td> {{ member.weight }}</td>
+                        </tr>
+                        <tr>
+                            <th>Height: </th>
+                            <td>{{ member.height }}</td>
+                        </tr>
+                        <tr>
+                            <th>Fitness level: </th>
+                            <td> {{ member.fitness_level }}</td>
+                        </tr>
+                        <tr>
+                            <th>Fitness goal: </th>
+                            <td>{{ member.goal }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
                 <p>Second column</p>
-            </div>
+            </div> -->
         </div>
     </div>
 
