@@ -6,6 +6,11 @@ body {
     background-color: #003399
 }
 
+.row {
+    border: solid 1px;
+    border-color: #003399;
+}
+
 /* .nav {
     color: white
 } */
