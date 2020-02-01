@@ -11,10 +11,6 @@ body {
     border-color: #003399;
 }
 
-h1 {
-    background-color: #ffd700
-}
-
 /* .nav {
     color: white
 } */
@@ -54,15 +50,14 @@ h1.welcome {
     padding-bottom: 40px;
 }
 
-/* img.pic {
-    max-height: 300;
-    max-width: 300;
-    border-left: solid 5px;
-    border-right: solid 5px
-} */
-
-.fit-image{
+.img-responsive.fit-image {
+    height: 200px;
     width: 100%;
-    object-fit: cover;
-    height: 300px;   
-    }
+    /* object-fit: none */
+}
+
+/* .fit-image { */
+    /* width: auto; 100% */
+    /* object-fit: fill; */
+    /* height: 300px;    */
+    /* } */
