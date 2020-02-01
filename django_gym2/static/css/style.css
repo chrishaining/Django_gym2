@@ -7,8 +7,12 @@ body {
 }
 
 .row {
-    border: solid 1px;
+    border-bottom: solid 0 5px;
     border-color: #003399;
+}
+
+h1 {
+    background-color: #ffd700
 }
 
 /* .nav {
@@ -50,7 +54,15 @@ h1.welcome {
     padding-bottom: 40px;
 }
 
-img.pic {
+/* img.pic {
     max-height: 300;
     max-width: 300;
-}
+    border-left: solid 5px;
+    border-right: solid 5px
+} */
+
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;   
+    }
