@@ -47,8 +47,8 @@ class Instructor(models.Model):
         return "{} {}".format(self.first_name, self.last_name)
 
     def get_absolute_url(self):
-        # return reverse('gym.views.instructor_details', args=[str(self.id)])
-        return "/gym/instructor_details/%i/" % self.id
+        return reverse('instructor_detail', args=[str(self.id)])
+        # return "/gym/instructor_details/%i/" % self.pk
 
 class Session(models.Model):
     title = models.CharField(max_length=255)
