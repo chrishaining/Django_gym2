@@ -11,17 +11,17 @@ def index(request):
     return render(request, "gym/index.html", locals())
 
 # InstructorDetailView.as_view
-# def instructor(request, instructor_pk):
-#     instructor = Instructor.objects.get(instructor_pk)
-#     return render(request, "gym/instructor_details.html", locals())
+def show_instructor(request, instructor_pk):
+    instructor = Instructor.objects.get(pk=instructor_pk)
+    return render(request, "gym/instructor_detail.html", locals())
 
 # def instructor(request, instructor_id):
 #     # return HttpResponse("You've selected instructor %s." % instructor_id)
 #     instructor = Instructor.object.get(instructor_id)
 #     return render(request, "gym/instructor_details/<int:instructor_id>", locals())
 
-class InstructorDetailView(generic.DetailView):
-    model = Instructor
+# class InstructorDetailView(generic.DetailView):
+#     model = Instructor
 
 
 
