@@ -1,5 +1,9 @@
 from django.db import models
 
+# imports reverse to allow us to use .getabsoluteurl()
+from django.urls import reverse
+
+
 # Create your models here.
 
 
@@ -42,6 +46,9 @@ class Instructor(models.Model):
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
 
+    def get_absolute_url(self):
+        # return reverse('gym.views.instructor_details', args=[str(self.id)])
+        return "/gym/instructor_details/%i/" % self.id
 
 class Session(models.Model):
     title = models.CharField(max_length=255)

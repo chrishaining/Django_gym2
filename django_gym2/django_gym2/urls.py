@@ -18,7 +18,6 @@ from django.urls import include, path
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.views import LogoutView
 
-
 urlpatterns = [
     path('gym/', include('gym.urls')),
     path('admin/', admin.site.urls),

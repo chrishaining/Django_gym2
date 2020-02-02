@@ -11,12 +11,19 @@ def index(request):
     return render(request, "gym/index.html", locals())
 
 # InstructorDetailView.as_view
-# def instructor(request):
-#     instructor = Instructor.objects.get(instructor.id)
-#     return render(request, "gym/instructor_details.html", locals())
+def instructor(request, instructor_pk):
+    instructor = Instructor.objects.get(instructor_pk)
+    return render(request, "gym/instructor_details.html", locals())
 
-class InstructorDetailView(generic.DetailView):
-    model = Instructor
+# def instructor(request, instructor_id):
+#     # return HttpResponse("You've selected instructor %s." % instructor_id)
+#     instructor = Instructor.object.get(instructor_id)
+#     return render(request, "gym/instructor_details/<int:instructor_id>", locals())
+
+# class InstructorDetailView(generic.DetailView):
+#     model = Instructor
+
+
 
 # when the user logs in, they should be taken to the member_details page, which shows their personal details as well as their sessions. I am not sure how to access the Member instance (without getting all the other members, too)
 @login_required

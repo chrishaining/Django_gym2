@@ -75,3 +75,6 @@ one_entry = Entry.objects.get(pk=1)
     //         "capacity": 10
     //     }
     // }
+
+## 2nd February 2020
+I'm still trying to open a new path from the home page to an instructor page. I tried using the template used in the [Django docs](https://docs.djangoproject.com/en/3.0/intro/tutorial03/#writing-more-views). It is doing something, because when I type the following url path - http://localhost:8000/gym/1/instructor_details/ - it displays some text. However, it's not exactly what I want.
